@@ -19,7 +19,6 @@ export default async function handler(req, res) {
       return res.status(200).send({ success: true, message: "Fetching Successful", data: relatedNews , tags:tags });
     }
   } catch (err) {
-    console.log(err);
     res.status(500).send(err);
   }
 }

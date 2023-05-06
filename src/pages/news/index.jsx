@@ -1,5 +1,4 @@
 export async function getStaticProps() {
-    console.log("getStaticProps()")
     return {
       props: {
         name:"Aayush Singh",

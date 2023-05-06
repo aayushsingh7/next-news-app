@@ -8,7 +8,7 @@ export default async function handler(req,res){
     if(req.method !== "POST") return res.status(200).send({success:false,message:"Method Not Allowed"})
     
  try{
-    await dbConnect().then(()=> console.log("Connected")).catch((err)=> console.log(err))
+    await dbConnect().catch((err)=> console.log(err))
     const {name,email,password} = req.body;
     validateBody(req.body)
 

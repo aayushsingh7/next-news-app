@@ -7,7 +7,6 @@ import {  useRouter } from 'next/router'
 
 export default function Navbar() {
   const { data: session } = useSession()
-  console.log("NAVBAR SESSION DAA", session)
   const [show, setShow] = useState(false)
   const router = useRouter()
 

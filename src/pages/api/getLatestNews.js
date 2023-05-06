@@ -15,6 +15,5 @@ export default async function handler(req, res) {
     res.status(200).json({success:true,message:"Fetched Successfully",data:latestNews});
   } catch (err) {
     res.status(500).send(err);
-    console.log(err);
   }
 }

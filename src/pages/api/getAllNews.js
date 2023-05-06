@@ -19,8 +19,6 @@ export default async function handler(req, res) {
     let data = await News.find();
     results.data = data.slice(startIndex, endIndex);
 
-    console.log(startIndex, endIndex);
-
     if (startIndex > 0) {
       results.previous = {
         page: page - 1,

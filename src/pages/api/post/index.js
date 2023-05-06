@@ -51,8 +51,6 @@ export default async function handler(req, res) {
         });
       }
 
-      console.log("Tags is now working", tags[1]);
-
       let news = new News({
         discription: discription,
         title: title,
@@ -76,7 +74,6 @@ export default async function handler(req, res) {
       res.status(400).send({ success: false, message: "Method Not Allowed" });
     }
   } catch (err) {
-    console.error("Error:", err);
     res.status(500).send({ error: err, req: req.body });
   }
 }

@@ -10,7 +10,6 @@ import { Helmet } from 'react-helmet'
 
 export default function Register({ props }) {
     const router = useRouter()
-    console.log(router)
     const [userInput, setUserInput] = useState({
         name: "",
         email: "",
@@ -35,7 +34,6 @@ export default function Register({ props }) {
 
     const registerUser = async (e) => {
         e.preventDefault()
-        console.log(userInput)
         if (!userInput.email || !userInput.password || !userInput.name) {
             return (toast('Please enter all the information', {
                 position: "top-center",
@@ -52,7 +50,6 @@ export default function Register({ props }) {
             setLoading(true)
             let register = await fetch('https://famous-strudel-cd5544.netlify.app/api/auth/register', { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(userInput) })
             let response = await register.json()
-            console.log(response)
             if (register.status === 200) {
                 setLoading(false)
                 toast('User registered successfully', {
@@ -81,7 +78,6 @@ export default function Register({ props }) {
             }
         } catch (err) {
             setLoading(false)
-            console.log(err)
         }
     }
 

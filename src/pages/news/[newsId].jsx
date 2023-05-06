@@ -28,7 +28,6 @@ export async function getServerSideProps(context) {
 
   const latestNews = await fetch('https://famous-strudel-cd5544.netlify.app/api/getLatestNews', { method: "GET", credentials: "include" })
   let latestNewsResponse = await latestNews.json()
-  console.log("LATEST NEWS RESPONSE", latestNewsResponse)
 
   return {
     props: {
@@ -42,12 +41,6 @@ export async function getServerSideProps(context) {
 
 export default function NewsId({ response, relatedNews, latestNews }) {
   const router = useRouter()
-  // console.log(router.query.newsId)
-  console.log(response.tags)
-  console.log("Related News", relatedNews)
-  // console.log(relatedNews)
-
-  console.log(`https://famous-strudel-cd5544.netlify.app/api/getRelatedNews?tags=${JSON.stringify(response.tags)}`)
 
   return (
     <div className={styles.News_Container}>

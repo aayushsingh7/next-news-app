@@ -9,10 +9,7 @@ const Home = ({ response })=>  {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [data , setData] = useState(response)
-  console.log(response)
-
   const { data:session} = useSession()
-  console.log("User Data",session)
   
 
 //   const handleSignOut = async()=> {
@@ -27,32 +24,22 @@ const Home = ({ response })=>  {
     try {
       let data = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getAllNews?page=${page}`, { method: "GET", credentials: "include" });
       let response = await data.json();
-      console.log("RESPONSE FROM FETCH NEWS",response);
      setData(response)
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const handleNextPage = async () => {
-    console.log("HandleNextPage")
     scrollTo(0,0)
     const nextPage = currentPage + 1;
     await fetchNews(nextPage)
     setCurrentPage(nextPage);
-    // console.log("NEW DATA FROM HANDLE PREV PAGE",newData)
-
-    // setData(newData);
   };
 
   const handlePrevPage = async () => {
-    console.log("HandlePrevPage")
     scrollTo(0,0)
     const nextPage = currentPage - 1;
     await fetchNews(nextPage);
     setCurrentPage(nextPage);
-    // console.log("NEW DATA FROM HANDLE PREV PAGE",newData)
-    // setData(newData);
   };
 
 
@@ -76,18 +63,14 @@ const Home = ({ response })=>  {
 
 export const getServerSideProps = async()=> {
   try {
-    console.log("Get server side props")
     let data = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getAllNews?page=${1}`,{method:"GET",credentials:"include"})
     let response = await data.json()
-    // console.log(response)
     return {
       props:{
         response:response
         }
     }
-  } catch (error) {
-    console.log(error)
-  }
+  } catch (error) {}
 }
 
 export default Home;

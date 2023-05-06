@@ -42,7 +42,6 @@ export default function Login({ props }) {
                 callbackUrl: "/"
             })
 
-            console.log(response)
             setLoading(false)
             if (response.ok) {
                 router.push(response.url)
@@ -70,7 +69,6 @@ export default function Login({ props }) {
             }
         } catch (err) {
             setLoading(false)
-            console.log(err)
         }
     }
 
@@ -83,18 +81,14 @@ export default function Login({ props }) {
     const handleGoogleSignIn = async () => {
         try {
             await signIn('google', { callbackUrl: "https://famous-strudel-cd5544.netlify.app" });
-        } catch (err) {
-            console.log(err)
-        }
+        } catch (err) { }
     };
 
 
     const handleGithubSignIn = async () => {
         try {
             signIn('github', { callbackUrl: "https://famous-strudel-cd5544.netlify.app" })
-        } catch (err) {
-            console.log(err)
-        }
+        } catch (err) {}
     }
 
 

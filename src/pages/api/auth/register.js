@@ -12,7 +12,7 @@ export default async function handler(req, res) {
           message: "Invalid Method Detected",
           validMethod: "POST",
         });
-    await dbConnect().catch((err) => console.log(er));
+    await dbConnect().catch((err) => console.log(err));
     const { email, password, name } = req.body;
 
     const isUserExists = await User.findOne({ email: email });

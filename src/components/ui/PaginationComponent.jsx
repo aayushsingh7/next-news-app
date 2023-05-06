@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../../styles/PaginationComponent.module.css'
 
 const PaginationComponent = ({ next , current , prev ,  response}) => {
-  console.log(response)
   return (
     <div className={styles.Parent_Container}>
       <div className={styles.Container}>

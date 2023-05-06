@@ -38,7 +38,6 @@ export default NextAuth({
   callbacks: {
     async signIn(user, account, profile) {
       await dbConnect()
-        .then(() => console.log("Database Connected"))
         .catch((err) => console.log(err));
       const isUserExists = await User.findOne({ email: user.user.email });
       if (!isUserExists) {

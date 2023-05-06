@@ -3,7 +3,6 @@ import styles from '../../styles/Box.module.css'
 import Link from "next/link";
 
 export default function Box({ data }) {
-    console.log(data)
     return (
         <Link href={`/news/${data?._id}`} className={styles.Navlinks}>
             <div className={styles.Container}>
