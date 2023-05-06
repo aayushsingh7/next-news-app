@@ -41,7 +41,7 @@ const UploadNews = () => {
       let formData = new FormData(form.current)
       formData.append('tags', JSON.stringify(tags))
       console.log("FORMDATA", formData)
-      let addNews = await fetch("https://main--frabjous-empanada-bde36e.netlify.app/api/post", { method: "POST", credentials: "include", body: formData,header:{"Content-Type":"multipart/form-data"} })
+      let addNews = await fetch("https://famous-strudel-cd5544.netlify.app/api/post", { method: "POST", credentials: "include", body: formData,header:{"Content-Type":"multipart/form-data"} })
       let response = await addNews.json()
       console.log(response)
       if (addNews.ok) {

@@ -19,14 +19,14 @@ import Box from "@/components/ui/Box"
 
 export async function getServerSideProps(context) {
 
-  const news = await fetch(`https://main--frabjous-empanada-bde36e.netlify.app/api/getSingleNews?newsId=${context.query.newsId}`, { method: "GET", credentials: "include" })
+  const news = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getSingleNews?newsId=${context.query.newsId}`, { method: "GET", credentials: "include" })
   let response = await news.json()
 
 
-  const relatedNews = await fetch(`https://main--frabjous-empanada-bde36e.netlify.app/api/getRelatedNews?tags=${JSON.stringify(response.data.tags)}`, { method: "GET", credentials: "include" })
+  const relatedNews = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getRelatedNews?tags=${JSON.stringify(response.data.tags)}`, { method: "GET", credentials: "include" })
   let relatedNewsResponse = await relatedNews.json()
 
-  const latestNews = await fetch('https://main--frabjous-empanada-bde36e.netlify.app/api/getLatestNews', { method: "GET", credentials: "include" })
+  const latestNews = await fetch('https://famous-strudel-cd5544.netlify.app/api/getLatestNews', { method: "GET", credentials: "include" })
   let latestNewsResponse = await latestNews.json()
   console.log("LATEST NEWS RESPONSE", latestNewsResponse)
 
@@ -47,7 +47,7 @@ export default function NewsId({ response, relatedNews, latestNews }) {
   console.log("Related News", relatedNews)
   // console.log(relatedNews)
 
-  console.log(`https://main--frabjous-empanada-bde36e.netlify.app/api/getRelatedNews?tags=${JSON.stringify(response.tags)}`)
+  console.log(`https://famous-strudel-cd5544.netlify.app/api/getRelatedNews?tags=${JSON.stringify(response.tags)}`)
 
   return (
     <div className={styles.News_Container}>

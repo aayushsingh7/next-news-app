@@ -53,7 +53,7 @@ export default NextAuth({
     signIn: '/login',
     error: '/register'
   },
-  callbackUrl: "https://main--frabjous-empanada-bde36e.netlify.app/api/auth/callback",
+  callbackUrl: "https://famous-strudel-cd5544.netlify.app/api/auth/callback",
 });
 
 // export default NextAuth({ providers: [ Providers.Google({ clientId: process.env.GOOGLE_CLIENT_ID, clientSecret: process.env.GOOGLE_CLIENT_SECRET, }), ], callbacks: { async signIn(user, account, profile) {

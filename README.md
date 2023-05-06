@@ -12,11 +12,11 @@ yarn dev
 pnpm dev
 ```
 
-Open [https://main--frabjous-empanada-bde36e.netlify.app](https://main--frabjous-empanada-bde36e.netlify.app) with your browser to see the result.
+Open [https://famous-strudel-cd5544.netlify.app](https://famous-strudel-cd5544.netlify.app) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [https://main--frabjous-empanada-bde36e.netlify.app/api/hello](https://main--frabjous-empanada-bde36e.netlify.app/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [https://famous-strudel-cd5544.netlify.app/api/hello](https://famous-strudel-cd5544.netlify.app/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 

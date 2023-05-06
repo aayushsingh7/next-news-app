@@ -82,7 +82,7 @@ export default function Login({ props }) {
 
     const handleGoogleSignIn = async () => {
         try {
-            await signIn('google', { callbackUrl: "https://main--frabjous-empanada-bde36e.netlify.app" });
+            await signIn('google', { callbackUrl: "https://famous-strudel-cd5544.netlify.app" });
         } catch (err) {
             console.log(err)
         }
@@ -91,7 +91,7 @@ export default function Login({ props }) {
 
     const handleGithubSignIn = async () => {
         try {
-            signIn('github', { callbackUrl: "https://main--frabjous-empanada-bde36e.netlify.app" })
+            signIn('github', { callbackUrl: "https://famous-strudel-cd5544.netlify.app" })
         } catch (err) {
             console.log(err)
         }

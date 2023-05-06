@@ -25,7 +25,7 @@ const Home = ({ response })=>  {
 
   const fetchNews = async (page) => {
     try {
-      let data = await fetch(`https://main--frabjous-empanada-bde36e.netlify.app/api/getAllNews?page=${page}`, { method: "GET", credentials: "include" });
+      let data = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getAllNews?page=${page}`, { method: "GET", credentials: "include" });
       let response = await data.json();
       console.log("RESPONSE FROM FETCH NEWS",response);
      setData(response)
@@ -77,7 +77,7 @@ const Home = ({ response })=>  {
 export const getServerSideProps = async()=> {
   try {
     console.log("Get server side props")
-    let data = await fetch(`https://main--frabjous-empanada-bde36e.netlify.app/api/getAllNews?page=${1}`,{method:"GET",credentials:"include"})
+    let data = await fetch(`https://famous-strudel-cd5544.netlify.app/api/getAllNews?page=${1}`,{method:"GET",credentials:"include"})
     let response = await data.json()
     // console.log(response)
     return {

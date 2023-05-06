@@ -50,7 +50,7 @@ export default function Register({ props }) {
         }
         try {
             setLoading(true)
-            let register = await fetch('https://main--frabjous-empanada-bde36e.netlify.app/api/auth/register', { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(userInput) })
+            let register = await fetch('https://famous-strudel-cd5544.netlify.app/api/auth/register', { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(userInput) })
             let response = await register.json()
             console.log(response)
             if (register.status === 200) {
