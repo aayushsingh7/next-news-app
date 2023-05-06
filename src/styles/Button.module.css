@@ -1,0 +1,16 @@
+.Dynamic_Global_Button{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size:var(--font-size-medium);
+    background: #007bff;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.loading{
+    pointer-events: none !important;
+    background: #48a0ffef !important;
+}

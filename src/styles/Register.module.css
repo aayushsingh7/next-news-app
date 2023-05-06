@@ -1,0 +1,97 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    position: relative;
+}
+
+.Box{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding:40px 30px 40px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: var(  --bg-primary-color);
+    border-radius: 10px;
+}
+
+.arrow{
+    font-size:42px;
+    padding: 6px;
+    border-radius: 50%;
+    background: var(--bg-secondary-color);
+    position: fixed;
+    top: 4%;
+    left: 3%;
+    cursor: pointer;
+}
+
+.Box h2{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size:2.5rem;
+    margin-bottom: 20px;
+}
+
+.Inputs_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Inputs_Container input{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size: var(--font-size-medium);
+    border-bottom: 2px solid var( --bg-dark-shade);
+    width: 100%;
+    outline: none;
+    margin-top: 30px;
+}
+
+
+/* .Inputs_Container button{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size:var(--font-size-medium);
+    background: #007bff;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+} */
+
+.Register_Option{
+    font-size: var(--font-size-medium);
+    margin-top: 20px;
+    padding: 15px;
+    background:var(--bg-primary-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.Register_Option span{
+    color: #007bff ;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width:700px) {
+    .Box h2{
+        font-size: calc(var(--font-size-big) + 15px);
+    }
+}

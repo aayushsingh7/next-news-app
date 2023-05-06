@@ -1,0 +1,126 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    position: relative;
+}
+
+.arrow{
+    font-size:42px;
+    padding: 6px;
+    border-radius: 50%;
+    background: var(--bg-secondary-color);
+    position: fixed;
+    top: 4%;
+    left: 3%;
+    cursor: pointer;
+}
+
+.Box{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 40px 30px 40px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: var(  --bg-primary-color);
+    border-radius: 10px;
+}
+
+.Box h2{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.Inputs_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Inputs_Container input{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 12px;
+    font-size: var(--font-size-medium);
+    border-bottom: 2px solid var( --bg-dark-shade);
+    width: 100%;
+    outline: none;
+    margin-top: 30px;
+}
+
+
+.Inputs_Container button{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size:var(--font-size-medium);
+    background: #007bff;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.Register_Option{
+    font-size: var(--font-size-medium);
+    margin-top: 20px;
+    padding: 15px;
+    background:var(--bg-primary-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.Register_Option span{
+    color: #007bff ;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.Social_Media_signIn{
+    appearance:none;
+    border: none;
+    background: white !important;
+    box-shadow: 0px 0px 4px 1px #e1e1e1;
+    border-radius: 10px;
+    font-size: var(--font-size-medium);
+    color: black !important;
+    cursor: pointer;
+    margin:20px 0px 0px 0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px !important;
+}
+
+.Social_Media_signIn img{
+    height: 15px;
+    margin-right: 10px;
+}
+
+.Social_Media_signIn:hover{
+    background: #f4f4f4 !important;
+}
+
+.seprator{
+    font-size: var(--font-size-small);
+    color: #555;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
